@@ -1,0 +1,8 @@
+
+{
+  "cSpell.words": ["editprofile", "firstname", "newquote", "parkinglocation"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false
+
+}

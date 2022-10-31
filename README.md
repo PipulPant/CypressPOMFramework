@@ -25,7 +25,7 @@ For formatting code This project use prettier for code formatting. For VScode in
 
 ## Headless Mode(Runs test in headless):
 
-        yarn run
+        yarn run:test
 
 ## Test Structure
 

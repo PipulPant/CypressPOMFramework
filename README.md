@@ -16,7 +16,7 @@
    For formatting code This project use prettier for code formatting. For VScode install extension quick guide
 
 
-3.How to Run the Tests Locally
+## 3.Running the test scripts
    ## Headed Mode:
         yarn cypress open
 

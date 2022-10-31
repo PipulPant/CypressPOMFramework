@@ -3,13 +3,13 @@
    
 ## How to do the setup of the automation framework
 
-1. Clone the repo
+   ## 1. Clone the repo
 
-2.Install the dependencies
-   cd ${project_directory}
-   yarn install
-   Editor of the Choice
-   Visual Studio Code
+   ## 2.Install the dependencies
+      cd ${project_directory}
+      yarn install
+      Editor of the Choice
+      Visual Studio Code
 
    For any other editor of choice make sure you config below dependencies yourself
 

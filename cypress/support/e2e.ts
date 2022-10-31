@@ -25,6 +25,15 @@ Cypress.on("uncaught:exception", (err, runnable) => {
   if (err.message.includes("validateLogin is not defined")) {
     return false;
   }
+
+  if (
+    err.message.includes(
+      "Cannot read properties of undefined (reading 'address')"
+    )
+  ) {
+    return true;
+  }
+
   // we still want to ensure there are no other unexpected
   // errors, so we let them fail the test
 });

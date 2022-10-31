@@ -12,7 +12,7 @@ export class ProfilePage {
   }
 
   firstNameInputBox() {
-    return cy.get("##user_firstname");
+    return cy.get("#user_firstname");
   }
 
   phoneInputBox() {
@@ -37,6 +37,56 @@ export class ProfilePage {
 
   updateUserButton() {
     return cy.get('input[name="commit"]');
+  }
+
+  showTitle() {
+    return cy.get("#showtitle");
+  }
+
+  showFirstname() {
+    return cy.get("#showfirstname");
+  }
+
+  showSurname() {
+    return cy.get("#showsurname");
+  }
+
+  showPhone() {
+    return cy.get("#showphone");
+  }
+
+  showDateOfBirth() {
+    return cy.get("#showdateofbirth");
+  }
+
+  showLicenseType() {
+    return cy.get("#showlicencetype");
+  }
+
+  showLicensePeriod() {
+    return cy.get("#showlicenceperiod");
+  }
+
+  showOccupation() {
+    return cy.get("#showoccupation");
+  }
+  showIncidents() {
+    return cy.get("#showincidents");
+  }
+
+  showStreet() {
+    return cy.get("#showstreet");
+  }
+  showCity() {
+    return cy.get("#showcity");
+  }
+
+  showCounty() {
+    return cy.get("#showcounty");
+  }
+
+  showPostcode() {
+    return cy.get("#showpostcode");
   }
 
   clickProfileButton() {

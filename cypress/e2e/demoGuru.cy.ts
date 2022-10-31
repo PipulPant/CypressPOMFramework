@@ -1,15 +1,17 @@
 import { MISSING_EMAIL_PASSWORD_ERROR } from "../fixtures/errorMessage";
 import { REQUEST_QUOTATION } from "../fixtures/requestQuotation";
-import { INVALID_USER, VALID_USER } from "../fixtures/user";
+import { PAGE_URLS } from "../fixtures/url";
+import { INVALID_USER, USER_PROFILE_INFO, VALID_USER } from "../fixtures/user";
 import {
   commonPage,
+  profilePage,
   requestQuotation,
   retrieveQuotation,
 } from "../page-objects/index.page";
 
 describe("demo guru spec", () => {
   before("redirect to the login page of demo guru", () => {
-    cy.visit("/insurance/v1/index.php");
+    cy.visit(PAGE_URLS.INDEX_PAGE);
   });
 
   describe("login with valid credentials", () => {
@@ -62,6 +64,36 @@ describe("demo guru spec", () => {
       retrieveQuotation
         .retrieveQuotationTable()
         .should("contain.text", "Garage");
+    });
+
+    it("verify user is able to edit profile with valid inputs", () => {
+      profilePage.clickEditProfileButton();
+      profilePage.setSurname(USER_PROFILE_INFO.SURNAME);
+      profilePage.setFirstName(USER_PROFILE_INFO.FIRSTNAME);
+      profilePage.setPhone(USER_PROFILE_INFO.PHONE);
+      profilePage.setAddress(USER_PROFILE_INFO.ADDRESS);
+      profilePage.setCity(USER_PROFILE_INFO.CITY);
+      profilePage.setPostCode(USER_PROFILE_INFO.POSTCODE);
+      profilePage.setCountry(USER_PROFILE_INFO.COUNTRY);
+      profilePage.clickUpdateUserButton();
+    });
+
+    it("verify user is able to view the updated profile information", () => {
+      profilePage.clickProfileButton();
+      profilePage.showTitle().should("have.text", "Mr");
+      profilePage
+        .showFirstname()
+        .should("have.text", USER_PROFILE_INFO.FIRSTNAME);
+      profilePage.showSurname().should("have.text", USER_PROFILE_INFO.SURNAME);
+      profilePage.showPhone().should("have.text", USER_PROFILE_INFO.PHONE);
+      profilePage.showLicenseType().should("have.text", "Full");
+      profilePage.showLicensePeriod().should("have.text", "2");
+      profilePage.showOccupation().should("have.text", "Academic");
+      profilePage.showCity().should("have.text", USER_PROFILE_INFO.CITY);
+      profilePage
+        .showPostcode()
+        .should("have.text", USER_PROFILE_INFO.POSTCODE);
+      profilePage.showCounty().should("have.text", USER_PROFILE_INFO.COUNTRY);
     });
 
     it("verify user is able to logout", () => {

@@ -1,7 +1,7 @@
 ## Proshore Cypress Automation Framework
-   Cypress automation framework with Typescript to perform e2e testing .
+   Cypress automation framework with Page Object Model to perform UI testing with Typescript support .
    
-## Setup
+## How to do the setup of the automation framework
 
 1. Clone the repo
 
@@ -16,16 +16,17 @@
    For formatting code This project use prettier for code formatting. For VScode install extension quick guide
 
 
-#How to Run the Tests Locally
+3.How to Run the Tests Locally
    ## Headed Mode:
         yarn cypress open
 
    ## Headless Mode:
         yarn cypress run 
         
-#Test Structure
-      cypress101.spec.js which contains the Test Scenario 1 and Test Scenario 2.
+## Test Structure
+      Cypress latest version i.e 10.10.0 is followed for folder structure. Further we have added page object model for maintainance of the selectors and         various user action.
+      All the test data inputs , error message are added in the fixture folder.
 
-#Additonal Information
-     For logging the accessibility test in console, I have added terminalLog() function which will display the accessibility voilation error in the            terminal.
+## Additonal Information
+     I have added Preetier to beautify the test code during developement phase.
       

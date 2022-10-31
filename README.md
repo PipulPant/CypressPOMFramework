@@ -19,13 +19,13 @@ For formatting code This project use prettier for code formatting. For VScode in
 
 ## 3.Running the test scripts
 
-## Headed Mode:
+## Headed Mode(Opens cypress test runner):
 
-        yarn open : Opens cypress test runner
+        yarn open
 
-## Headless Mode:
+## Headless Mode(Runs test in headless):
 
-        yarn run : Runs test in headless mode
+        yarn run
 
 ## Test Structure
 

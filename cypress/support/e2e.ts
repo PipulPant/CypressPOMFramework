@@ -14,26 +14,27 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "./commands";
+import './commands'
+import 'cypress-mochawesome-reporter/register'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-Cypress.on("uncaught:exception", (err, runnable) => {
+Cypress.on('uncaught:exception', (err, runnable) => {
   // we expect a 3rd party library error with message 'list not defined'
   // and don't want to fail the test so we return false
-  if (err.message.includes("validateLogin is not defined")) {
-    return false;
+  if (err.message.includes('validateLogin is not defined')) {
+    return false
   }
 
   if (
     err.message.includes(
-      "Cannot read properties of undefined (reading 'address')"
+      "Cannot read properties of undefined (reading 'address')",
     )
   ) {
-    return true;
+    return true
   }
 
   // we still want to ensure there are no other unexpected
   // errors, so we let them fail the test
-});
+})

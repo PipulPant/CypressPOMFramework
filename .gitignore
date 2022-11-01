@@ -7,4 +7,6 @@
 
 # Node artifact files
 node_modules/
+cypress/screenshots/
 cypress/videos/
+

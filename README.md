@@ -33,7 +33,7 @@ For formatting code This project use prettier for code formatting. For VScode in
       All the test data inputs , error message are added in the fixture folder.
       
 ## Reporting
-     Integrated cypress-mochawesome-reporter which generated the automation result in cypress/report/*html which can be viewed directly in the browser.
+Integrated cypress-mochawesome-reporter which generated the automation result in cypress/report/*html which can be viewed directly in the browser.
 
 ## Additional Information
 

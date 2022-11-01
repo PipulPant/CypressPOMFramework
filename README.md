@@ -35,3 +35,22 @@ For formatting code This project use prettier for code formatting. For VScode in
 ## Additional Information
 
      I have added Prettier to beautify the test code during development phase.
+     
+## Automated Test cases Status
+
+Login -Passed
+Retrieve Quotation - Passed
+Recieve Quotation - Passed
+Edit Profile - Failed
+Profile - Failed
+LOgout - Passed
+
+![image](https://user-images.githubusercontent.com/74281996/199217141-30a198a2-7741-4d13-82fa-0a9d2a0a6e87.png)
+
+![image](https://user-images.githubusercontent.com/74281996/199214683-0940feeb-da24-4d9f-8bea-3f7d5decac5e.png)
+
+![image](https://user-images.githubusercontent.com/74281996/199214757-82815203-2834-4976-bab5-59164164ecaa.png)
+
+
+
+

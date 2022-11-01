@@ -42,13 +42,19 @@ declare namespace Cypress {
      * Custom command to select DOM element by data-cy attribute.
      * @example cy.dataCy('greeting')
      */
-    login(email: string, password: string): Chainable<Element>;
+    login(email: string, password?: string): Chainable<Element>
   }
 }
 
-Cypress.Commands.add("login", (email: string, password: string) => {
-  cy.visit("/insurance/v1/index.php");
-  cy.get("#email").type(email);
-  cy.get("#password").type(password);
-  cy.get('input[name="submit"]').click();
-});
+Cypress.Commands.add('login', (email?: string, password?: string) => {
+  cy.visit('/insurance/v1/index.php')
+  if (email && password) {
+    cy.get('#email').type(email)
+    cy.get('#password').type(password)
+  } else if (email) {
+    cy.get('#email').type(email)
+  } else {
+    cy.get('password').type(password)
+  }
+  cy.get('input[name="submit"]').click()
+})

@@ -36,8 +36,8 @@ For formatting code This project use prettier for code formatting. For VScode in
 Integrated cypress-mochawesome-reporter which generated the automation result in cypress/report/*html which can be viewed directly in the browser.
 
 ## Additional Information
-
-     I have added Prettier to beautify the test code during development phase.
+I have added Prettier to beautify the test code during development phase.
+Test Plan is also included in the folder TestPlan/ .
      
 ## Automated Test cases Status
 
